@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/favicon/icon.ico" sizes="any">
+  <link rel="icon" href="./assets/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Travel</title>
+  <meta name="description" content="Explore the beauty of the World with Travel Portal">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper wrapper">
+      <div class="header__logo">
+        <a href="#" class="logo__link">
+          <object type="image/svg+xml" data="./assets/svg/logo.svg" class="logo__svg-object">
+            Your browser does not support SVG
+          </object>
+          <span class="logo__text js-camel-case">Travel portal</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="header-nav">
+          <li class="header-nav__item"><a href="#preview" class="header-nav__link js-camel-case">How it works</a></li>
+          <li class="header-nav__item"><a href="#steps" class="header-nav__link js-camel-case">Plan your trip</a></li>
+          <li class="header-nav__item"><a href="#destinations" class="header-nav__link js-camel-case">Destinations</a></li>
+          <li class="header-nav__item"><a href="#stories" class="header-nav__link js-camel-case">Travel stories</a>
+          </li>
+          <li class="header-nav__item mobile"><a href="#" class="header-nav__link js-camel-case show-login">Account</a>
+          </li>
+          <li class="header-nav__item mobile"><a href="#social-media" class="header-nav__link js-camel-case">Social Media</a>
+          </li>
+        </ul>
+        <span class="close-btn close-btn_modal mobile"></span>
+      </nav>
+      <div class="header__buttons">
+        <button class="button button_small show-login">Login</button>
+      </div>
+      <div class="nav__overlay overlay"></div>
+      <div class="mobile-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <div class="login">
+    <div class="login_overlay overlay"></div>
+    <div class="login__popup">
+      <h3 class="login__title">Log in to your account</h3>
+      <button class="button button_light-font button_facebook button_login-popup" type="button" data-singup-hide><span>Sign In with Facebook</span></button>
+      <button class="button button_light-font button_google button_login-popup" type="button" data-singup-hide><span>Sign In with Google</span></button>
+      <span class="splitter splitter_with-text" data-singup-hide>or</span>
+      <form class="login-form" action="#" id="login-form">
+        <label class="login-form__label" for="email">E-mail</label>
+        <input class="login-form__input" type="email" name="email" id="email" required>
+        <label class="login-form__label" for="password">Password</label>
+        <input class="login-form__input" type="password" id="password" name="password" required autocomplete="on">
+        <input class="button button_light-font button_login-popup login-button" type="submit" value="Sign In">
+      </form>
+      <a class="login-form__link login-form_text-shadow js-camel-case" href="#" data-singup-hide>Forgot your password?</a>
+      <span class="splitter splitter_last"></span>
+      <div class="login-form__extra">
+        <span class="login-form__text login-form_text-shadow login-text">Don't have an account?</span>
+        <a class="login-form__link login-form_text-shadow login-form-change-link" href="#" data-current-state="singin">Register</a>
+      </div>
+    </div>
+  </div>
+  <main>
+    <section class="preview section" id="preview">
+      <div class="wrapper">
+        <div class="preview__inner">
+          <h1 class="main-title">Explore the beauty of the World</h1>
+          <p class="preview__text">Receive personalized recommendations for countries, hotels, activities and more</p>
+          <div class="preview__form">
+            <input class="preview__input" type="text" placeholder="What would you like to do?">
+            <button class="button preview__button js-camel-case" type="button">Start planning</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="steps section section_steps" id="steps">
+      <h2 class="section-title centered">3 steps to the perfect trip</h2>
+      <div class="steps-container wrapper">
+        <div class="step">
+          <h3 class="step__title">Tell us what you want to do</h3>
+          <div class="step__image">
+            <object type="image/svg+xml" data="./assets/svg/step-1.svg" class="step__ico">
+              Your browser does not support SVG
+            </object>
+          </div>
+        </div>
+        <div class="step step_center">
+          <h3 class="step__title">Share us preferable dates</h3>
+          <div class="step__image">
+            <object type="image/svg+xml" data="./assets/svg/step-2.svg" class="step__ico">
+              Your browser does not support SVG
+            </object>
+          </div>
+        </div>
+        <div class="step">
+          <h3 class="step__title">We will give you recommendations</h3>
+          <div class="step__image">
+            <object type="image/svg+xml" data="./assets/svg/step-3.svg" class="step__ico ico_correct">
+              Your browser does not support SVG
+            </object>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="destinations section" id="destinations">
+      <h2 class="section-title section-title_destinations centered">Popular destinations</h2>
+      <div class="slider wrapper slider-wrapper_full-width">
+        <div class="slider__inner">
+          <div class="slides">
+            <div class="slider__item">
+              <picture>
+                <source media="(max-width: 390px)" srcset="./assets/img/slide-1-ratio.jpg">
+                <img class="slide__image" src="./assets/img/slide-1.jpg" alt="Spain">
+              </picture>
+              <h3 class="slide__title">Spain</h3>
+            </div>
+            <div class="slider__item active">
+              <picture>
+                <source media="(max-width: 390px)" srcset="./assets/img/slide-2-ratio.jpg">
+                <img class="slide__image" src="./assets/img/slide-2.jpg" alt="Japan">
+              </picture>
+              <h3 class="slide__title">Japan</h3>
+            </div>
+            <div class="slider__item">
+              <picture>
+                <source media="(max-width: 390px)" srcset="./assets/img/slide-3-ratio.jpg">
+                <img class="slide__image" src="./assets/img/slide-3.jpg" alt="USA">
+              </picture>
+              <h3 class="slide__title">Usa</h3>
+            </div>
+          </div>
+          <div class="slider__arrows">
+            <div class="slider__arrows-inner">
+              <div class="arrow arrow_left"></div>
+              <div class="arrow arrow_right"></div>
+            </div>
+          </div>
+          <div class="slider__dots"></div>
+        </div>
+      </div>
+      <div class="more-destinations centered">
+        <button class="button button_more-detinations js-camel-case"><span class="button_arrow-right">Find more</span></button>
+      </div>
+    </section>
+    <section class="stories section section_stories" id="stories">
+      <h2 class="section-title section-title_stories centered">Travel stories</h2>
+      <div class="stories__container">
+        <div class="stories__wrapper">
+          <div class="wrapper">
+            <div class="story">
+              <div class="story__inner">
+                <h3 class="story__title">10 Photos of Attractive Thailand</h3>
+                <p class="story__text" lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla<span class="template-error"> pariatur</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="#" class="story__redme-more-link js-camel-case">Read more</a>
+              </div>
+              <img class="story__image image_big" src="./assets/img/stories-1.jpg" alt="10 Photos of Attractive Thailand">
+              <img class="story__image image_390" src="./assets/img/stories-1-390.jpg" alt="10 Photos of Attractive Thailand">
+            </div>
+            <div class="story">
+              <div class="story__inner">
+                <h3 class="story__title">Canyonlands National Park, Utah</h3>
+                <p class="story__text" lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla<span class="template-error"> pariatur</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="#" class="story__redme-more-link js-camel-case">Read more</a>
+              </div>
+              <img class="story__image image_big" src="./assets/img/stories-2.jpg" alt="Canyonlands National Park, Utah">
+              <img class="story__image image_390" src="./assets/img/stories-2-390.jpg" alt="Canyonlands National Park, Utah">
+            </div>
+            <div class="story">
+              <div class="story__inner">
+                <h3 class="story__title">I left my heart in the Mountains!</h3>
+                <p class="story__text" lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla<span class="template-error"> pariatur</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="#" class="story__redme-more-link js-camel-case">Read more</a>
+              </div>
+              <img class="story__image image_big" src="./assets/img/stories-3.jpg" alt="I left my heart in the Mountains!">
+              <img class="story__image image_390" src="./assets/img/stories-3-390.jpg" alt="I left my heart in the Mountains!">
+            </div>
+            <div class="story">
+              <div class="story__inner">
+                <h3 class="story__title">The Longest journey in my life!</h3>
+                <p class="story__text" lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla<span class="template-error"> pariatur</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="#" class="story__redme-more-link js-camel-case">Read more</a>
+              </div>
+              <img class="story__image image_big" src="./assets/img/stories-4.jpg" alt="The Longest journey in my life!">
+              <img class="story__image image_390" src="./assets/img/stories-4-390.jpg" alt="The Longest journey in my life!">
+            </div>
+            <div class="more-stories centered">
+              <button class="button button_more-stories js-camel-case"><span class="button_arrow-right">See more</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-wrapper wrapper">
+      <p class="copy">
+        All Rights Reserved &copy; Travel Portal
+      </p>
+      <ul class="footer__links" id="social-media">
+        <li>
+          <a class="footer-link" href="https://github.com/oibioib" target="_blank" rel="noopener noreferrer">
+            <object class="footer-link__svg-object" type="image/svg+xml" data="./assets/svg/instagram.svg">
+              Your browser does not support SVG
+            </object>
+          </a>
+        </li>
+        <li>
+          <a class="footer-link" href="https://rs.school/js-stage0/" target="_blank" rel="noopener noreferrer">
+            <object class="footer-link__svg-object" type="image/svg+xml" data="./assets/svg/youtube.svg">
+              Your browser does not support SVG
+            </object>
+          </a>
+        </li>
+        <li>
+          <a class="footer-link" href="#">
+            <object class="footer-link__svg-object" type="image/svg+xml" data="./assets/svg/twitter.svg">
+              Your browser does not support SVG
+            </object>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+  <script src="./js/self-test.js"></script>
+</body>
+
+</html>

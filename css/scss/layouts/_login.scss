@@ -1,0 +1,144 @@
+.login {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  top: calc(-100% - 700px);
+  width: 100%;
+  padding: 20px;
+  transition: top 0.7s ease-in;
+
+  &.active {
+    top: 0;
+  }
+
+  &_overlay {
+    z-index: 1;
+  }
+
+  &__title {
+    margin-top: 0;
+    @include font($size: 3.2rem, $height: 3.5rem, $weight: 700);
+
+    @media screen and (max-width: $tablet-small-width) {
+      @include font($size: 2.4rem, $height: 2.6rem, $weight: 700);
+    }
+
+    &.fix-template {
+      margin-top: 2px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__popup {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    padding: 25px 45px 0;
+    background: linear-gradient(177.09deg, $color-white 6.15%, $color-secondary 202.69%);
+    @include box-shadow($y: 4px, $blur: 4px, $color: $color-black, $color-opacity: 0.25);
+    border-radius: $radius-primary;
+    text-align: center;
+    @include font($size: 1.5rem, $height: 1.8rem, $weight: 700);
+    z-index: 2;
+
+    & * {
+      width: 100%;
+      margin-bottom: 19px;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      padding: 20px 20px 0;
+    }
+
+    & .hide {
+      display: none;
+    }
+  }
+
+  &-form {
+    & * {
+      margin-bottom: 18px;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+
+    &__label {
+      display: block;
+      @include font($size: 1.6rem, $height: 1.9rem, $weight: 400);
+
+      &_singup {
+        text-align: left;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__input {
+      height: 54px;
+      padding: 0 15px;
+      border: 0;
+      outline: 0;
+      font-family: $font-secondary;
+      border-radius: $radius-buttons;
+      box-shadow: inset 0px 0px 3px rgba($color-secondary, 0.08), inset 0px 2px 3px rgba($color-secondary, 0.16);
+      transition: $transition-primary;
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0px 0px 3px rgba($color-secondary, 0.08), inset 0px 2px 3px rgba($color-secondary, 0.16),
+          0px 0px 0px 1px rgba($color-secondary, 0.2), 0px 0px 0px 4px rgba($color-secondary, 0.2);
+      }
+    }
+
+    &__link {
+      @include font($size: 1.5rem, $height: 1.8rem, $weight: 700);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__text {
+      margin-top: 0;
+      color: rgba($color-secondary, 0.5);
+    }
+
+    &_text-shadow {
+      @include text-shadow($y: 2px, $blur: 3px, $color: $color-white, $color-opacity: 0.16);
+    }
+  }
+}
+
+.splitter {
+  display: flex;
+  align-items: center;
+  @include font($size: 2rem, $height: 2.4rem, $weight: 700);
+  color: rgba($color-secondary, 0.5);
+
+  &:before,
+  &:after {
+    content: "";
+    flex: 1 1;
+    height: 0;
+    border-bottom: 1px solid rgba($color-secondary, 0.5);
+  }
+
+  &_with-text {
+    &:before {
+      margin-right: 9px;
+    }
+    &:after {
+      margin-left: 9px;
+    }
+  }
+}
+.splitter_last {
+  margin-top: -2px;
+
+  &.fix-template {
+    margin-top: 7px;
+    margin-bottom: 21px;
+  }
+}

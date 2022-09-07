@@ -1,0 +1,122 @@
+.button {
+  padding: 14px 34px 13px 33px;
+  font-family: $font-secondary;
+  @include font($size: 2.4rem, $height: 3.2rem, $weight: 500);
+  color: $color-white;
+  background-color: $color-secondary;
+  border: 0;
+  border-radius: $radius-buttons;
+  box-shadow: 0px 0px 3px rgba($color-secondary, 0.08), 0px 2px 3px rgba($color-secondary, 0.16);
+  transition: $transition-primary;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color-secondary, 0.75);
+    @include box-shadow($y: 2px, $blur: 4px, $color: $color-black, $color-opacity: 0.25);
+  }
+
+  @media screen and (max-width: $tablet-small-width) {
+    @include font($size: 1.8rem, $height: 2.2rem, $weight: 500);
+    padding: 10px 20px;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    @include font($size: 1.1rem, $height: 1.5rem, $weight: 500);
+    padding: 7px 11px 7px 7px;
+  }
+
+  &_light-font {
+    font-weight: 400;
+  }
+
+  &_login-popup {
+    padding: 14px;
+    @include font($size: 2rem, $height: 2.6rem);
+
+    @media screen and (max-width: $mobile-width) {
+      @include font($size: 1.6rem, $height: 2rem);
+    }
+
+    @media screen and (max-width: $smallest-width) {
+      @include font($size: 1.4rem, $height: 1.8rem);
+    }
+
+    &.fix-template {
+      margin-top: 8px;
+    }
+  }
+
+  &_facebook {
+    padding: 15px;
+    color: $color-white;
+    background-color: $color-facebook;
+
+    & span {
+      margin: 0 auto;
+      padding-left: 38px;
+      background: -1px center url(../assets/svg/facebook.svg) no-repeat;
+      
+      @media screen and (max-width: $mobile-width) {
+        background-size: contain;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($color-facebook, 0.75);
+      @include box-shadow($y: 2px, $blur: 4px, $color: $color-facebook, $color-opacity: 0.25);
+    }
+  }
+
+  &_google {
+    padding: 14px;
+    color: $color-secondary;
+    background-color: $color-white;
+
+    & span {
+      margin: 0 auto;
+      padding-left: 38px;
+      background: -1px center url(../assets/svg/google.svg) no-repeat;
+
+      @media screen and (max-width: $mobile-width) {
+        background-size: contain;
+      }
+    }
+
+    &:hover {
+      color: $color-white;
+
+      & span {
+        background-image: url(../assets/svg/google_white.svg);
+      }
+      // box-shadow: 0px 0px 3px rgba($color-secondary, 0.08), 0px 2px 3px rgba($color-secondary, 0.16);
+    }
+  }
+}
+
+.button_arrow-right {
+  display: flex;
+  align-items: center;
+}
+
+.button_arrow-right {
+  &::before {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 41px;
+    margin-right: 9px;
+    background-image: url("#{$assetPath}/svg/arrow-right.svg");
+
+    @media screen and (max-width: $mobile-width) {
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      background-size: cover;
+    }
+  }
+}
+
+.button_small {
+  padding: 10px 30px;
+  @include font($size: 1.6rem, $height: 2.1rem, $weight: 500);
+}
